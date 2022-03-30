@@ -1,0 +1,48 @@
+.nextLink {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--cyan);
+    position: relative;
+}
+
+.nextLink::after {
+    content: '';
+    position: absolute;
+    bottom: -1.2rem;
+    left: 0;
+    width: 25%;
+    height: 1px;
+    background-color: var(--cyan);
+    transition: width .65s ease-out;
+    opacity: .7;
+}
+
+.nextLink:hover::after {
+    animation: hoverEffect 1s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+}
+
+.nextLink:active::after,
+.nextLink:focus::after {
+    animation: clickEffect .5s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+}
+
+@keyframes hoverEffect {
+    0% {
+        width: 25%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes clickEffect {
+    0% {
+        width: 50%;
+    }
+
+    100% {
+        width: 400%;
+    }
+}

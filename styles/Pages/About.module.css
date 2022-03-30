@@ -1,0 +1,18 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    max-width: 45rem;
+}
+
+.content_title {
+    font-size: 6.4rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+
+.content_para {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}

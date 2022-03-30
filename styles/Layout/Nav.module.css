@@ -1,0 +1,32 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 2rem 3.2rem;
+}
+
+.nav_home {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav_home>span:first-child {
+    font-size: 2rem;
+    color: white;
+}
+
+.nav_home>span:last-child {
+    font-size: 1.6rem;
+    color: var(--cyan);
+}
+
+.nav_group {
+    display: flex;
+    gap: 6.6rem;
+}
+
+.nav_link {
+    font-size: 2rem;
+    color: white;
+    text-transform: capitalize;
+}

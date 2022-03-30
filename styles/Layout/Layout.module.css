@@ -1,0 +1,9 @@
+.main {
+    flex: 1;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--sideMargins);
+    overflow: hidden;
+
+}
