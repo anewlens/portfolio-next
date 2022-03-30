@@ -1,0 +1,9 @@
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content_title {
+    font-size: 6.4rem;
+    font-weight: 700;
+}
