@@ -11,8 +11,8 @@ const Work: NextPage = () => {
 
     return (
         <div className={styles.content}>
-            <h1 className={styles.content_title}>Work</h1>
             <div className={styles.content_projects}>
+                <h1 className={styles.content_title}>Work</h1>
                 <section className={styles.content_controls}>
                     {
                         projects.map(({ title }, i) => (
@@ -21,15 +21,15 @@ const Work: NextPage = () => {
                     }
 
                 </section>
-                <section className={styles.content_panels}>
-                    {
-                        projects.map((project, i) => (
-                            <WorkPanel project={project} selected={selected === i} key={project.id} />
-                        )
-                        )
-                    }
-                </section>
             </div>
+            <section className={styles.content_panels}>
+                {
+                    projects.map((project, i) => (
+                        <WorkPanel project={project} selected={selected === i} key={project.id} />
+                    )
+                    )
+                }
+            </section>
 
         </div>
     );

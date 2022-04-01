@@ -59,7 +59,7 @@ const projects = [
         category: 'Work in progress',
         techStack: ['NextJS', 'Typescript', 'Firebase', ],
         description: 'SSR recipe platform for storing, creating, tweaking and sharing recipes.',
-        views: ['BiteBook_1.png', 'BiteBook_2.png', 'BiteBook_3.png'],
+        views: ['BiteBook_1.png', 'BiteBook_2.png', 'BiteBook_3.png', 'BiteBook_4.png'],
         github: 'https://github.com/anewlens/bitebook'
     }
 ]

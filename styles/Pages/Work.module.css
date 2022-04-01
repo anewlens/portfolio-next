@@ -1,18 +1,17 @@
 .content {
     display: flex;
-    flex-direction: column;
     width: 100%;
+    gap: 20rem
 }
 
 .content_title {
     font-size: 6.4rem;
     font-weight: 700;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
 }
 
 .content_projects {
-    display: flex;
-    gap: 20rem;
+    flex: 1;
 }
 
 .content_controls {
@@ -36,6 +35,8 @@
 
     .content {
         margin-bottom: 4rem;
+        flex-direction: column;
+        gap: 0;
     }
 
     .content_controls {
