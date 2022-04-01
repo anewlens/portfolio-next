@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       <LazyMotion features={domAnimation}>
         <AnimatePresence initial={false} exitBeforeEnter>
           <m.main
-            key={ .route}
+            key={router.route}
             variants={pageAnimation}
             initial="hidden"
             animate="visible"
