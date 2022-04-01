@@ -1,0 +1,38 @@
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content_title {
+    font-size: 6.4rem;
+    font-weight: 700;
+}
+
+.content_subtitle {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--cyan);
+    margin-bottom: 3rem;
+}
+
+.content_link {
+    font-size: 2rem;
+    color: white;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.content_link svg {
+    fill: white;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 2.4rem;
+    transition: fill .2s ease-out;
+}
+
+.content_link:hover :is(svg) {
+    color: var(--cyan);
+    fill: var(--cyan);
+}

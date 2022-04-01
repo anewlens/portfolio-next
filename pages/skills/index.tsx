@@ -1,7 +1,7 @@
 import React from 'react';
 import { NextPage } from 'next';
 import styles from '../../styles/Pages/Skills.module.css'
-import Button from '../../Components/Common/NextPageLink';
+import Button from '../../Components/UI/NextPageLink';
 
 const Skills: NextPage = () => {
     return (

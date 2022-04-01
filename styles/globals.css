@@ -23,9 +23,10 @@ body>#__next {
   font-size: 62.5%;
 
   --bg: #072A3D;
-  --cyan: #7BF7FF;
+  --cyan: hsl(184, 100%, 74%);
   --cyan-light: hsl(184, 100%, 90%);
   --green: #7EFF7B;
+  --green-light: hsl(119, 100%, 84%);
 
   --sideMargins: 17vw;
 }
@@ -44,10 +45,15 @@ a {
   color: var(--cyan);
   transition: color .2s ease-out;
   font-weight: 700;
+  cursor: pointer;
 }
 
 a:hover {
   color: var(--cyan-light);
+}
+
+button {
+  cursor: pointer;
 }
 
 ul {

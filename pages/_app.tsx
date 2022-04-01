@@ -6,6 +6,8 @@ import {
   domAnimation, LazyMotion,
   m
 } from 'framer-motion'
+import styles from '../styles/Layout/Layout.module.css'
+
 
 function MyApp({ Component, pageProps, router }: AppProps) {
 
@@ -21,12 +23,14 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       <LazyMotion features={domAnimation}>
         <AnimatePresence initial={false} exitBeforeEnter>
           <m.main
-            key={router.route}
+            key={ .route}
             variants={pageAnimation}
             initial="hidden"
             animate="visible"
             exit="exit"
-            transition={{ type: 'linear' }}>
+            transition={{ type: 'linear' }}
+            className={styles.main}>
+
             <Component {...pageProps} />
           </m.main>
         </AnimatePresence>

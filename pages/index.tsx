@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Button from '../Components/Common/NextPageLink'
+import Button from '../Components/UI/NextPageLink'
 import styles from '../styles/Pages/Home.module.css'
 
 const Home: NextPage = () => {

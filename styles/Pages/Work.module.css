@@ -1,9 +1,33 @@
 .content {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .content_title {
     font-size: 6.4rem;
     font-weight: 700;
+    margin-bottom: 6rem;
+}
+
+.content_projects {
+    display: flex;
+    gap: 20rem;
+}
+
+.content_controls {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.content_controls>a {
+    margin-bottom: 4rem;
+}
+
+.content_panels {
+    flex: 2;
+    max-height: 60rem;
+    display: flex;
+    align-items: center;
 }
