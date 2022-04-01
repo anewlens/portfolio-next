@@ -12,11 +12,11 @@ const Contact: NextPage = () => {
         <div className={styles.content}>
             <h1 className={styles.content_title}>Contact</h1>
             <h2 className={styles.content_subtitle}>Want to reach out?</h2>
-            <a className={styles.content_link} href="mailto:rccarroll3@gmail.com"><Email />rccarroll3@gmail.com</a>
-            <a className={styles.content_link} href="https://github.com/anewlens"><Github />/anewlens</a>
-            <a className={styles.content_link} href="https://linkedin/in/robbiecarro11"><Linkedin />/robbiecarro11</a>
-            <a className={styles.content_link} href="https://instagram.com/robbiecarro11"><Instagram />@robbiecarro11</a>
-            <a className={styles.content_link} href="https://twitter.com/robbiecarro11"><Twitter />@robbiecarro11</a>
+            <a className={styles.content_link} target="_blank" rel="noreferrer" href="mailto:rccarroll3@gmail.com"><Email />rccarroll3@gmail.com</a>
+            <a className={styles.content_link} target="_blank" rel="noreferrer" href="https://github.com/anewlens"><Github />/anewlens</a>
+            <a className={styles.content_link} target="_blank" rel="noreferrer" href="https://linkedin.com/in/robbiecarro11"><Linkedin />/robbiecarro11</a>
+            <a className={styles.content_link} target="_blank" rel="noreferrer" href="https://instagram.com/robbiecarro11"><Instagram />@robbiecarro11</a>
+            <a className={styles.content_link} target="_blank" rel="noreferrer" href="https://twitter.com/robbiecarro11"><Twitter />@robbiecarro11</a>
         </div>
     );
 };

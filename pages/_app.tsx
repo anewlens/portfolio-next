@@ -21,19 +21,17 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <Layout>
       <LazyMotion features={domAnimation}>
-        <AnimatePresence initial={false} exitBeforeEnter>
-          <m.main
-            key={router.route}
-            variants={pageAnimation}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            transition={{ type: 'linear' }}
-            className={styles.main}>
+        <m.main
+          key={router.route}
+          variants={pageAnimation}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          transition={{ type: 'linear' }}
+          className={styles.main}>
 
-            <Component {...pageProps} />
-          </m.main>
-        </AnimatePresence>
+          <Component {...pageProps} />
+        </m.main>
 
       </LazyMotion>
     </Layout >
