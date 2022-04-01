@@ -14,6 +14,9 @@
 
 .ImageSwitcher_imgContainer.selected {
     display: block;
+    flex: 1;
+    height: 250px;
+    overflow-y: hidden;
 }
 
 .ImageSwitcher_imgContainer.selected img {

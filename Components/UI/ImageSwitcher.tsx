@@ -11,7 +11,7 @@ const ImageSwitcher = ({ images }: { images: string[] }) => {
             {
                 images.map((image: string, i: number) => (
                     <div key={i} className={`${styles.ImageSwitcher_imgContainer} ${selected == i && styles.selected}`}>
-                        <Image alt={image} src={`/img/${image}`} width='1099' height='509' layout='responsive' priority />
+                        <img alt={image} src={`/img/${image}`} width='1099' height='509' />
                     </div>
                 ))
             }
