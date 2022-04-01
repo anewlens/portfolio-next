@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { NextPage } from 'next'
 import styles from '../../styles/Pages/Work.module.css'
-import Button from '../../Components/UI/NextPageLink';
 import projects from '../../data/projects.js'
 import WorkButton from '../../Components/UI/WorkButton';
 import WorkPanel from '../../Components/UI/WorkPanel';
@@ -20,9 +19,7 @@ const Work: NextPage = () => {
                             <WorkButton testid={`WorkButton_${title}`} title={title} key={i} selected={selected == i} func={() => { setSelected(i) }} />
                         ))
                     }
-                    <Button route="/contact">
-                        Wanna talk?
-                    </Button>
+
                 </section>
                 <section className={styles.content_panels}>
                     {

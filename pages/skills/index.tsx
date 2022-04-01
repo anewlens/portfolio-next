@@ -1,7 +1,6 @@
 import React from 'react';
 import { NextPage } from 'next';
 import styles from '../../styles/Pages/Skills.module.css'
-import Button from '../../Components/UI/NextPageLink';
 
 const Skills: NextPage = () => {
     return (
@@ -54,9 +53,6 @@ const Skills: NextPage = () => {
                 </ul>
 
             </section>
-            <Button route='/work'>
-                See what I&rsquo;ve done
-            </Button>
         </div>
     );
 };
