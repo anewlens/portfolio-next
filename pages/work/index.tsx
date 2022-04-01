@@ -16,7 +16,7 @@ const Work: NextPage = () => {
                 <section className={styles.content_controls}>
                     {
                         projects.map(({ title }, i) => (
-                            <WorkButton testid={`WorkButton_${title}`} title={title} key={i} selected={selected == i} func={() => { setSelected(i) }} />
+                            <WorkButton title={title} key={i} selected={selected == i} func={() => { setSelected(i) }} />
                         ))
                     }
 
@@ -24,7 +24,7 @@ const Work: NextPage = () => {
                 <section className={styles.content_panels}>
                     {
                         projects.map((project, i) => (
-                            <WorkPanel testid={`WorkPanel_${project.title}`} project={project} selected={selected === i} key={project.id} />
+                            <WorkPanel project={project} selected={selected === i} key={project.id} />
                         )
                         )
                     }

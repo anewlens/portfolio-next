@@ -31,3 +31,19 @@
     display: flex;
     align-items: center;
 }
+
+@media screen and (max-width: 500px) {
+
+    .content {
+        margin-bottom: 4rem;
+    }
+
+    .content_controls {
+        display: none;
+    }
+
+    .content_panels {
+        flex-direction: column;
+        max-height: none;
+    }
+}

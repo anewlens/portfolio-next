@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     align-items: baseline;
     position: relative;
+
 }
 
 .content>a {
@@ -71,4 +72,11 @@
     height: 1px;
     background: var(--cyan);
     opacity: .5;
+}
+
+@media screen and (max-width: 500px) {
+
+    .content {
+        margin-bottom: 10rem;
+    }
 }

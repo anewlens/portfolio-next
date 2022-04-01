@@ -7,5 +7,5 @@ export interface ProjectTypes {
     description: string,
     github?: string,
     live?: string,
-    views?: string[]
+    views: string[]
 }

@@ -7,7 +7,7 @@ const ImageSwitcher = ({ images }: { images: string[] }) => {
     const [selected, setSelected] = useState(0);
 
     return (
-        <div className={styles.ImageSwitcher} testid="imageSwitcher">
+        <div className={styles.ImageSwitcher}>
             {
                 images.map((image: string, i: number) => (
                     <div key={i} className={`${styles.ImageSwitcher_imgContainer} ${selected == i && styles.selected}`}>

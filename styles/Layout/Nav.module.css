@@ -30,3 +30,26 @@
     color: white;
     text-transform: capitalize;
 }
+
+@media screen and (max-width: 500px) {
+
+    .nav {
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+        padding: 2rem;
+    }
+
+    .nav_home {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        padding-bottom: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .nav_group {
+        gap: 3rem;
+        flex: 100%;
+        justify-content: space-between;
+    }
+}

@@ -6,16 +6,16 @@ import ImageSwitcher from './ImageSwitcher';
 
 type PropTypes = {
     project: ProjectTypes,
-    selected: boolean,
-    testid: string
+    selected: boolean
+
 }
 
-const WorkPanel = ({ project, selected, testid }: PropTypes) => {
+const WorkPanel = ({ project, selected }: PropTypes) => {
 
     const { title, subtitle, techStack, description, github, live, views } = project;
 
     return (
-        <div className={`${styles.WorkPanel} ${selected && styles.selected}`} testid={testid}>
+        <div className={`${styles.WorkPanel} ${selected && styles.selected}`} >
             <ImageSwitcher images={views} />
             <div className={`${styles.WorkPanel_content} `}>
                 <h3 className={styles.WorkPanel_title} >{title}</h3>
