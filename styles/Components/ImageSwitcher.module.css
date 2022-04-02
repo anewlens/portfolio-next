@@ -27,10 +27,44 @@
 .ImageSwitcher_controls {
     position: absolute;
     display: flex;
-    gap: 2rem;
     flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 1.2rem);
     right: -2rem;
-    bottom: 0;
+    bottom: .4rem;
+    z-index: 4;
+}
+
+.ImageSwitcher_controls::before {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    width: 2px;
+    height:100%;
+    background-image: linear-gradient(to bottom, var(--cyan) 7%, rgba(255, 255, 255, 0) 0%);
+                    background-position: left;
+                    background-size: 2px 2rem;
+                    background-repeat: repeat-y;
+    z-index: -1;
+    opacity:.5;
+}
+
+.ImageSwitcher_controls_label {
+    color: var(--cyan);
+    writing-mode: vertical-lr;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    background-color: var(--bg);
+    padding-bottom: 1rem;
+}
+
+.ImageSwitcher_controls_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--bg);
+    padding-top: 1rem;
 }
 
 .ImageSwitcher_button {

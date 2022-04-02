@@ -29,6 +29,8 @@ body>#__next {
   --green-light: hsl(119, 100%, 84%);
 
   --sideMargins: 17vw;
+
+  --pageTitleSize: clamp(3.2rem, 4.5vw, 5.2rem);
 }
 
 * {

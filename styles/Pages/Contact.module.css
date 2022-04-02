@@ -4,7 +4,7 @@
 }
 
 .content_title {
-    font-size: 6.4rem;
+    font-size: var(--pageTitleSize);
     font-weight: 700;
 }
 

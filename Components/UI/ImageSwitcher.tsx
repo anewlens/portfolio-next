@@ -18,14 +18,18 @@ const ImageSwitcher = ({ images }: { images: string[] }) => {
                 })
             }
             <div className={styles.ImageSwitcher_controls}>
-                {
-                    images.map((image, i) => (
-                        <button key={i} onClick={() => setSelected(i)}
-                            className={`${styles.ImageSwitcher_button} ${selected == i && styles.selected}`}>
+                <span className={styles.ImageSwitcher_controls_label}>Views</span>
+                <div className={styles.ImageSwitcher_controls_buttons}>
+                    {
+                        images.map((image, i) => (
 
-                        </button>
-                    ))
-                }
+                            <button key={i} onClick={() => setSelected(i)}
+                                className={`${styles.ImageSwitcher_button} ${selected == i && styles.selected}`}>
+
+                            </button>
+                        ))
+                    }
+                </div>
             </div>
         </div>
 
