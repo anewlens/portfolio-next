@@ -9,11 +9,13 @@ const ImageSwitcher = ({ images }: { images: string[] }) => {
     return (
         <div className={styles.ImageSwitcher}>
             {
-                images.map((image: string, i: number) => (
-                    <div key={i} className={`${styles.ImageSwitcher_imgContainer} ${selected == i && styles.selected}`}>
-                        <img alt={image} src={`/img/${image}`} width='1099' height='509' />
-                    </div>
-                ))
+                images.map((image: string, i: number) => {
+                    return (
+                        <div key={i} className={`${styles.ImageSwitcher_imgContainer} ${selected == i && styles.selected}`}>
+                            <Image alt={image} src={`/img/${image}`} width='1440' height='900' placeholder='blur' blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mO0qGmqZyACMI4qpK9CAOWiER1fkjBCAAAAAElFTkSuQmCC" priority />
+                        </div>
+                    )
+                })
             }
             <div className={styles.ImageSwitcher_controls}>
                 {

@@ -6,7 +6,7 @@ const projects = [
         category: 'Professional',
         techStack: ['HTML', 'CSS', 'JS'],
         description: 'Various UI elements built within the T4 CMS',
-        views: ['LayeredContent.png', 'LinkTiles.png', 'TabsSlideshow.png', 'TwoColumn.png', 'AlphaCards.png']
+        views: ['LayeredContent.jpg', 'LinkTiles.jpg', 'TabsSlideshow.jpg', 'TwoColumn.jpg', 'AlphaCards.jpg']
     },
     {
         id: 1,
@@ -15,7 +15,7 @@ const projects = [
         category: 'Personal Projects',
         techStack: ['React + Redux', 'Node + Express', 'MongoDB', 'JSON web tokens'],
         description: 'A CRUD app with authentication and a NoSQL database',
-        views: ['SAVR_1.png', 'SAVR_2.png'],
+        views: ['SAVR_1.jpg', 'SAVR_2.jpg'],
         github: 'https://github.com/anewlens/Savr',
         live: 'https://savr-app.herokuapp.com/'
     },
@@ -26,7 +26,7 @@ const projects = [
         category: 'Professional',
         techStack: ['React', 'Sass'],
         description: 'React portfolio for graphic design client',
-        views: ['Claire_1.png', 'Claire_2.png'],
+        views: ['Claire_1.jpg', 'Claire_2.jpg'],
         github: 'https://github.com/anewlens/claire-zen',
         live: 'https://clairezen.com'
     },
@@ -37,7 +37,7 @@ const projects = [
         category: 'Personal Projects',
         techStack: ['HTML', 'CSS', 'JS', 'Node + Express'],
         description: 'App with a Node + Express backend calling on the Yelp API',
-        views: ['IDK-WBU.png'],
+        views: ['IDK-WBU.jpg'],
         github: 'https://github.com/anewlens/idk-wbu',
         live: 'https://idk-wbu.herokuapp.com/'
     },
@@ -48,7 +48,7 @@ const projects = [
         category: 'Personal Projects',
         techStack: ['HTML', 'CSS', 'JS'],
         description: 'Static site for mock mom & pop restaurant',
-        views: ['Tito_1.png', 'Tito_2.png'],
+        views: ['Tito_1.jpg', 'Tito_2.jpg'],
         github: 'https://github.com/anewlens/Primo_Pizza',
         live: 'https://anewlens.github.io/Primo_Pizza/'
     },
@@ -59,7 +59,7 @@ const projects = [
         category: 'Work in progress',
         techStack: ['NextJS', 'Typescript', 'Firebase', ],
         description: 'SSR recipe platform for storing, creating, tweaking and sharing recipes.',
-        views: ['BiteBook_1.png', 'BiteBook_2.png', 'BiteBook_3.png', 'BiteBook_4.png'],
+        views: ['BiteBook_1.jpg', 'BiteBook_2.jpg', 'BiteBook_3.jpg', 'BiteBook_4.jpg'],
         github: 'https://github.com/anewlens/bitebook'
     }
 ]
