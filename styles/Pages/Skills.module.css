@@ -26,7 +26,7 @@
 }
 
 .content_section_title {
-    font-size: 3.2rem;
+    font-size: var(--subTitleSize);
     font-weight: 700;
     color: var(--cyan);
     flex: 100%;
