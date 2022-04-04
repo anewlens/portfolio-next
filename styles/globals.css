@@ -4,8 +4,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Inria', sans-serif;
   background-color: var(--bg);
   min-height: 100vh;
   display: flex;
@@ -23,7 +22,7 @@ body>#__next {
   font-size: 62.5%;
 
   --bg: #072A3D;
-  --cyan: hsl(184, 100%, 74%);
+  --cyan: #7af6ff;
   --cyan-light: hsl(184, 100%, 90%);
   --green: #7EFF7B;
   --green-light: hsl(119, 100%, 84%);

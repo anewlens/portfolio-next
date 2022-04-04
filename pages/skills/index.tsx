@@ -9,7 +9,10 @@ const Skills: NextPage = () => {
             <Head>
                 <title>Skills | Robbie Carroll</title>
                 <meta name="description" content="Robbie Carroll, web dev and designer based in Richmond, VA + remote" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png" />
+                <link rel="manifest" href="/img/icons/site.webmanifest" />
             </Head>
             <div className={styles.content}>
                 <h1 className={styles.content_title}>Skills</h1>

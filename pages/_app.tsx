@@ -13,7 +13,12 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
   const pageAnimation = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: .5
+      }
+    },
     exit: { opacity: 0 }
   }
 
