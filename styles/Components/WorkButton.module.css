@@ -2,33 +2,19 @@
     background: transparent;
     border: none;
     color: var(--cyan);
-    font-size: 3.2rem;
+    font-size: clamp(1.6rem, 2vw, 2.8rem);
     position: relative;
     width: 100%;
     text-align: left;
+    height:var(--buttonHeight);
+    z-index: 3;
 }
 
 .WorkButton:hover {
     color: var(--cyan-light);
 }
 
-.WorkButton::after {
-    position: absolute;
-    content: '';
-    top: 0%;
-    right: 0%;
-    height: 100%;
-    width: 1px;
-    background-color: white;
-    opacity: 0;
-    transition: opacity .2s ease-out;
-}
-
 .WorkButton.selected {
     color: white;
 }
 
-.WorkButton.selected::after {
-    opacity: 1;
-
-}

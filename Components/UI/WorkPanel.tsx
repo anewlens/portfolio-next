@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion'
 import { ProjectTypes } from '../../data/types'
 import styles from '../../styles/Components/WorkPanel.module.css'
 import Github from '../SVGs/Github';
@@ -7,7 +8,21 @@ import ImageSwitcher from './ImageSwitcher';
 type PropTypes = {
     project: ProjectTypes,
     selected: boolean
+}
 
+const fadeIn = {
+    initial: {
+        opacity: 0
+    },
+    animate: {
+        opacity: 1,
+        transition: {
+            duration: .5
+        }
+    },
+    exit: {
+        opacity: 0
+    }
 }
 
 const WorkPanel = ({ project, selected }: PropTypes) => {
@@ -15,7 +30,7 @@ const WorkPanel = ({ project, selected }: PropTypes) => {
     const { title, subtitle, techStack, description, github, live, views } = project;
 
     return (
-        <div className={`${styles.WorkPanel} ${selected && styles.selected}`} >
+        <motion.div className={`${styles.WorkPanel} ${selected && styles.selected}`} variants={fadeIn} initial='initial' animate='animate' exit='exit'>
             <ImageSwitcher images={views} />
             <div className={`${styles.WorkPanel_content} `}>
                 <h3 className={styles.WorkPanel_title} >{title}</h3>
@@ -37,9 +52,8 @@ const WorkPanel = ({ project, selected }: PropTypes) => {
                         </div>
                     )
                 }
-
             </div>
-        </div>
+        </motion.div>
     );
 };
 

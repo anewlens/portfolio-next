@@ -42,6 +42,10 @@ body>#__next {
   padding: 0;
 }
 
+h1 {
+  color: var(--cyan-light);
+}
+
 a {
   color: inherit;
   text-decoration: none;

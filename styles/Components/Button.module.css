@@ -21,28 +21,3 @@
 .nextLink:hover::after {
     animation: hoverEffect 1s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
 }
-
-.nextLink:active::after,
-.nextLink:focus::after {
-    animation: clickEffect .5s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
-}
-
-@keyframes hoverEffect {
-    0% {
-        width: 25%;
-    }
-
-    100% {
-        width: 50%;
-    }
-}
-
-@keyframes clickEffect {
-    0% {
-        width: 50%;
-    }
-
-    100% {
-        width: 400%;
-    }
-}

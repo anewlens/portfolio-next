@@ -3,6 +3,8 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 2rem 3.2rem;
+    --dot-space: .6rem;
+    --dot-size: 1px;
 }
 
 .nav_home {
@@ -29,6 +31,10 @@
     font-size: 2rem;
     color: white;
     text-transform: capitalize;
+}
+
+.nav_link.selected {
+    color: var(--cyan);
 }
 
 @media screen and (max-width: 500px) {
