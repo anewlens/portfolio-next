@@ -1,8 +1,14 @@
 .WorkPanel {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
 }
+
+.WorkPanel.selected {
+    display: flex;
+
+}
+
 .WorkPanel_content {
     display: flex;
     flex-direction: column;
