@@ -5,13 +5,10 @@ import styles from '../../styles/Pages/Work.module.css'
 import projects from '../../data/projects.js'
 import WorkButton from '../../Components/UI/WorkButton';
 import WorkPanel from '../../Components/UI/WorkPanel';
-import { AnimatePresence } from 'framer-motion';
 
 const Work: NextPage = () => {
 
     const [selected, setSelected] = useState(0)
-
-    const PanelList = projects.map((project, i) => <WorkPanel project={project} selected={selected === i} key={project.id} />)
 
     return (
         <>
@@ -50,12 +47,12 @@ const Work: NextPage = () => {
                     </section>
                 </div>
                 <section className={styles.content_panels}>
-
                     {
-                        PanelList[selected]
+                        projects.map((project, i) => (
+                            <WorkPanel project={project} selected={selected === i} key={project.id} />
+                        )
+                        )
                     }
-
-
                 </section>
 
             </div>
