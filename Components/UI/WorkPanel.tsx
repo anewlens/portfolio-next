@@ -33,8 +33,8 @@ const WorkPanel = ({ project, selected }: PropTypes) => {
         <motion.div className={`${styles.WorkPanel} ${selected && styles.selected}`} variants={fadeIn} initial='initial' animate='animate' exit='exit'>
             <ImageSwitcher images={views} />
             <div className={`${styles.WorkPanel_content} `}>
-                <h3 className={styles.WorkPanel_title} >{title}</h3>
-                <p className={styles.WorkPanel_subtitle}>{subtitle}</p>
+                <h2 className={styles.WorkPanel_title} >{title}</h2>
+                <h3 className={styles.WorkPanel_subtitle}>{subtitle}</h3>
                 <p className={styles.WorkPanel_techStack}>
                     {
                         techStack.map((tech, i) => (

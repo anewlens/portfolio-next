@@ -16,16 +16,16 @@ const Nav = () => {
             </Link>
             <div className={`${styles.nav_group} ${open && styles.open}`}>
                 <Link href='/about'>
-                    <a onClick={() => toggleOpen(false)} className={`${styles.nav_link} ${path == '/about' && styles.selected}`}>about</a>
+                    <a title="About | Robbie Carroll" onClick={() => toggleOpen(false)} className={`${styles.nav_link} ${path == '/about' && styles.selected}`}>about</a>
                 </Link>
                 <Link href='/skills'>
-                    <a onClick={() => toggleOpen(false)} className={`${styles.nav_link} ${path == '/skills' && styles.selected}`}>skills</a>
+                    <a title="Skills | Robbie Carroll" onClick={() => toggleOpen(false)} className={`${styles.nav_link} ${path == '/skills' && styles.selected}`}>skills</a>
                 </Link>
                 <Link href='/work'>
-                    <a onClick={() => toggleOpen(false)} className={`${styles.nav_link} ${path == '/work' && styles.selected}`}>work</a>
+                    <a title="Work | Robbie Carroll" onClick={() => toggleOpen(false)} className={`${styles.nav_link} ${path == '/work' && styles.selected}`}>work</a>
                 </Link>
                 <Link href='/contact'>
-                    <a onClick={() => toggleOpen(false)} className={`${styles.nav_link} ${path == '/contact' && styles.selected}`}>contact</a>
+                    <a title="Contact | Robbie Carroll" onClick={() => toggleOpen(false)} className={`${styles.nav_link} ${path == '/contact' && styles.selected}`}>contact</a>
                 </Link>
                 <button onClick={() => toggleOpen(!open)} className={styles.nav_mobileClose}>&#10005;</button>
 

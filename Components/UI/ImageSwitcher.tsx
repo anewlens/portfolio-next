@@ -23,7 +23,7 @@ const ImageSwitcher = ({ images }: { images: string[] }) => {
                     {
                         images.map((image, i) => (
 
-                            <button key={i} onClick={() => setSelected(i)}
+                            <button key={i} value={`View ${image}`} onClick={() => setSelected(i)}
                                 className={`${styles.ImageSwitcher_button} ${selected == i && styles.selected}`}>
 
                             </button>
