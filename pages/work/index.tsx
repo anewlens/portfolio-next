@@ -5,10 +5,29 @@ import styles from '../../styles/Pages/Work.module.css'
 import projects from '../../data/projects.js'
 import WorkButton from '../../Components/UI/WorkButton';
 import WorkPanel from '../../Components/UI/WorkPanel';
+import { ProjectTypes } from '../../data/types'
 
 const Work: NextPage = () => {
 
     const [selected, setSelected] = useState(0)
+
+    const groupByCategory = (list: ProjectTypes[]): ProjectTypes[][] => {
+        let newList: ProjectTypes[][] = []
+        let categories: string[] = []
+        list.forEach((item: ProjectTypes) => {
+            if (!categories.some(category => category == item.category)) {
+                categories.push(item.category);
+            } else {
+                console.log('none')
+            }
+        })
+        categories.forEach((category) => {
+            let categoryGroup = list.filter(item => item.category == category)
+            newList.push(categoryGroup)
+        })
+
+        return newList
+    }
 
     return (
         <>
@@ -25,11 +44,21 @@ const Work: NextPage = () => {
                     <h1 className={styles.content_title}>Work</h1>
                     <section className={styles.content_controls}>
                         {
-                            projects.map(({ title }, i) => (
-                                <WorkButton title={title} key={i} selected={selected == i} func={() => { setSelected(i) }} />
-                            ))
+                            groupByCategory(projects).map((category: ProjectTypes[], i: number) => {
+                                let label = category[0].category
+                                return (
+                                    <>
+                                        <span key={i} className={styles.content_controls_label}>{label}</span>
+                                        {
+                                            category.map(item => (
+                                                <WorkButton title={item.title} key={item.id} selected={selected == item.id} func={() => { setSelected(item.id) }} />
+                                            ))
+                                        }
+                                    </>
+                                )
+                            })
                         }
-                        <div className={`content_controls_marker`}></div>
+                        {/* <div className={`content_controls_marker`}></div>
                         <style jsx>
                             {`
                             .content_controls_marker {
@@ -46,13 +75,16 @@ const Work: NextPage = () => {
                                 z-index: 1;
                             }
                             `}
-                        </style>
+                        </style> */}
                     </section>
                 </div>
                 <section className={styles.content_panels}>
                     {
+
+
+
                         projects.map((project, i) => (
-                            <WorkPanel project={project} selected={selected === i} key={project.id} />
+                            <WorkPanel project={project} selected={selected === project.id} key={project.id} />
                         )
                         )
                     }

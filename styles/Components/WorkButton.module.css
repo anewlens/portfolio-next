@@ -1,20 +1,76 @@
 .WorkButton {
+    --left-spacing: 2.4rem;
+    --animation-timing: .3s;
+    
     background: transparent;
     border: none;
     color: var(--cyan);
     font-size: clamp(1.6rem, 2vw, 2.8rem);
     position: relative;
     width: 100%;
+    padding: .4rem 1.6rem .4rem var(--left-spacing);
+    margin-left: calc(var(--left-spacing) * -1);
     text-align: left;
-    height:var(--buttonHeight);
+    /* height:var(--buttonHeight); */
     z-index: 3;
+    transition: all .2s ease-out;
+    overflow: hidden;
+
+}
+
+.WorkButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    opacity: .05;
+    background-color: var(--cyan);
+    transition: all var(--animation-timing) ease-out;
+}
+
+.WorkButton::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - .4rem);
+    left: 0;
+    height: .8rem;
+    width: .8rem;
+    border-radius: 1rem;
+    background-color: var(--cyan-light);
+    opacity: 0;
+    transition: all var(--animation-timing) ease-out;
+
 }
 
 .WorkButton:hover {
     color: var(--cyan-light);
 }
 
+.WorkButton:not(.selected):hover::after {
+    opacity: 1;
+}
+
 .WorkButton.selected {
     color: white;
+}
+
+.WorkButton.selected::before {
+    
+    left: 0;
+    height: 100%;
+
+    opacity: .05;
+    
+}
+
+.WorkButton.selected::after {
+    left: 99%;
+    opacity: 1;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: white;
 }
 

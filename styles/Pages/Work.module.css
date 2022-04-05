@@ -24,6 +24,18 @@
     position: relative;
 }
 
+.content_controls_label {
+    font-size: 1.2rem;
+}
+
+.content_controls_label:not(:first-child) {
+    margin-top: 1rem;
+}
+
+.content_controls_label:not(:last-child) {
+    margin-bottom: .4rem;
+}
+
 .content_controls>a {
     margin-bottom: 4rem;
 }
