@@ -16,12 +16,43 @@
     display: block;
     flex: 1;
     overflow-y: hidden;
+    position: relative;
 }
 
 .ImageSwitcher_imgContainer.selected img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+.ImageSwitcher_prev, .ImageSwitcher_next {
+    position: absolute;
+    width: 100%;
+    color: #5c89a1;
+    font-size: 3rem;
+    z-index: 100;
+    padding: 1rem 0;
+    left: 0;
+    transition: all .2s ease-out;
+    opacity: .75
+}
+
+.ImageSwitcher_prev:hover , .ImageSwitcher_next:hover {
+    color:#8cc6e5;
+    opacity: 1;
+}
+
+.ImageSwitcher_prev {
+    top: 0;
+    writing-mode: sideways-lr;
+    background: linear-gradient(to bottom, hsla(201, 50%, 13%, 0.443) 0%, transparent 100%);
+}
+
+
+.ImageSwitcher_next {
+    bottom: 0;
+    writing-mode: sideways-rl;
+    background: linear-gradient(to top, hsla(201, 50%, 13%, 0.443) 0%, transparent 100%);
 }
 
 .ImageSwitcher_controls {

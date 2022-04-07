@@ -12,7 +12,11 @@ const ImageSwitcher = ({ images }: { images: string[] }) => {
                 images.map((image: string, i: number) => {
                     return (
                         <div key={i} className={`${styles.ImageSwitcher_imgContainer} ${selected == i && styles.selected}`}>
+                            <button className={styles.ImageSwitcher_prev} onClick={() => { if (selected > 0) { setSelected(selected - 1) } }}>&#10097;</button>
+
                             <Image alt={image} src={`/img/${image}`} width='1440' height='900' placeholder='blur' blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mO0qGmqZyACMI4qpK9CAOWiER1fkjBCAAAAAElFTkSuQmCC" priority />
+
+                            <button className={styles.ImageSwitcher_next} onClick={() => { if (selected < images.length - 1) { setSelected(selected + 1) } }}>&#10097;</button>
                         </div>
                     )
                 })
@@ -23,9 +27,9 @@ const ImageSwitcher = ({ images }: { images: string[] }) => {
                     {
                         images.map((image, i) => (
 
-                            <button key={i} value={`View ${image}`} onClick={() => setSelected(i)}
+                            <button key={i} onClick={() => setSelected(i)}
                                 className={`${styles.ImageSwitcher_button} ${selected == i && styles.selected}`}>
-
+                                <span hidden>View {image}</span>
                             </button>
                         ))
                     }
