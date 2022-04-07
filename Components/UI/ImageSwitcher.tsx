@@ -12,11 +12,11 @@ const ImageSwitcher = ({ images }: { images: string[] }) => {
                 images.map((image: string, i: number) => {
                     return (
                         <div key={i} className={`${styles.ImageSwitcher_imgContainer} ${selected == i && styles.selected}`}>
-                            <button className={styles.ImageSwitcher_prev} onClick={() => { if (selected > 0) { setSelected(selected - 1) } }}>&#10097;</button>
+                            {/* <button className={styles.ImageSwitcher_prev} onClick={() => { if (selected > 0) { setSelected(selected - 1) } }}>Prev</button> */}
 
                             <Image alt={image} src={`/img/${image}`} width='1440' height='900' placeholder='blur' blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mO0qGmqZyACMI4qpK9CAOWiER1fkjBCAAAAAElFTkSuQmCC" priority />
 
-                            <button className={styles.ImageSwitcher_next} onClick={() => { if (selected < images.length - 1) { setSelected(selected + 1) } }}>&#10097;</button>
+                            {/* <button className={styles.ImageSwitcher_next} onClick={() => { if (selected < images.length - 1) { setSelected(selected + 1) } }}>Next</button> */}
                         </div>
                     )
                 })
